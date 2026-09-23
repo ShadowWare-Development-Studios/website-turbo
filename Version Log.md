@@ -31,5 +31,14 @@
 - Fixed the document type and language attributes in index.html.
 - Mobile Version of Website now available!
 
-## AI usage
+## AI usage in this version
 - Prompt: Can you help me mak the design of this website code to be more modern and simple? Propose changes I can add to my update log for version 0.0.5.
+
+# Version 0.0.6 Changelog
+- Updated the navigation into a sticky, translucent top bar.
+- Added smooth page-load animations for the top bar, hero content, sections, and project cards.
+- Added staggered animation timing to create a more polished entrance effect.
+- Added a reduced-motion accessibility option for users who prefer less animation.
+
+## AI Usage in this version
+- Prompt: Awesome. I think we should also add those fancy animations when you load and a top bar. As always document changes for version 0.0.6

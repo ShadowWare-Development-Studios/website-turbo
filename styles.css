@@ -24,18 +24,36 @@ body {
     line-height: 1.6;
 }
 
-.site-header,
+.top-bar,
 main,
 footer {
     width: min(1100px, calc(100% - 48px));
     margin: 0 auto;
 }
 
-.site-header {
+.top-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 28px 0;
+    animation: slide-down 700ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.top-bar::before {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 50%;
+    width: 100vw;
+    height: 100%;
+    border-bottom: 1px solid color-mix(in srgb, var(--line) 80%, transparent);
+    background: color-mix(in srgb, var(--paper) 84%, transparent);
+    backdrop-filter: blur(14px);
+    content: "";
+    transform: translateX(50%);
 }
 
 .brand {
@@ -73,6 +91,26 @@ nav a:hover,
 .hero {
     max-width: 790px;
     padding: 100px 0 128px;
+}
+
+.hero > * {
+    animation: rise-in 800ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.hero > :nth-child(1) {
+    animation-delay: 100ms;
+}
+
+.hero > :nth-child(2) {
+    animation-delay: 180ms;
+}
+
+.hero > :nth-child(3) {
+    animation-delay: 280ms;
+}
+
+.hero > :nth-child(4) {
+    animation-delay: 380ms;
 }
 
 .eyebrow,
@@ -157,6 +195,12 @@ h3 {
     border-top: 1px solid var(--line);
 }
 
+.intro-section,
+.projects-section,
+.mystery-section {
+    animation: rise-in 800ms 450ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
 .intro-section p:last-child {
     max-width: 580px;
     color: var(--muted);
@@ -192,6 +236,11 @@ h3 {
     background: var(--white);
     border: 1px solid var(--line);
     border-radius: 6px;
+    animation: rise-in 700ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.project-card:nth-child(2) {
+    animation-delay: 120ms;
 }
 
 .project-card img {
@@ -238,14 +287,50 @@ footer span {
     color: var(--blue);
 }
 
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rise-in {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
+
 @media (max-width: 680px) {
-    .site-header,
+    .top-bar,
     main,
     footer {
         width: min(100% - 32px, 1100px);
     }
 
-    .site-header {
+    .top-bar {
         padding: 20px 0;
     }
 
