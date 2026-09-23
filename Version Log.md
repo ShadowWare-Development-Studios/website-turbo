@@ -29,6 +29,7 @@
 - Added semantic sections for About, Projects, and the Mystery Button.
 - Updated colors, spacing, typography, buttons, and mobile layout in styles.css.
 - Fixed the document type and language attributes in index.html.
+- Mobile Version of Website now available!
 
 ## AI usage
 - Prompt: Can you help me mak the design of this website code to be more modern and simple? Propose changes I can add to my update log for version 0.0.5.
