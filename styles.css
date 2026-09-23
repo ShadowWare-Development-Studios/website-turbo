@@ -6,6 +6,7 @@
     --paper: #f7faf9;
     --line: #d9e5e2;
     --white: #ffffff;
+    --motion-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 * {
@@ -39,7 +40,7 @@ footer {
     align-items: center;
     justify-content: space-between;
     padding: 28px 0;
-    animation: slide-down 700ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    animation: slide-down 700ms var(--motion-ease) both;
 }
 
 .top-bar::before {
@@ -94,7 +95,7 @@ nav a:hover,
 }
 
 .hero > * {
-    animation: rise-in 800ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    animation: rise-in 800ms var(--motion-ease) both;
 }
 
 .hero > :nth-child(1) {
@@ -198,7 +199,7 @@ h3 {
 .intro-section,
 .projects-section,
 .mystery-section {
-    animation: rise-in 800ms 450ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    animation: rise-in 800ms 450ms var(--motion-ease) both;
 }
 
 .intro-section p:last-child {
@@ -236,7 +237,7 @@ h3 {
     background: var(--white);
     border: 1px solid var(--line);
     border-radius: 6px;
-    animation: rise-in 700ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    animation: rise-in 700ms var(--motion-ease) both;
 }
 
 .project-card:nth-child(2) {

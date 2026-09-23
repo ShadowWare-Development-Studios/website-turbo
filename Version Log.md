@@ -42,3 +42,12 @@
 
 ## AI Usage in this version
 - Prompt: Awesome. I think we should also add those fancy animations when you load and a top bar. As always document changes for version 0.0.6
+
+# Version 0.0.7 Changelog
+- Simplified the mystery button JavaScript with a safer event-listener guard and concise arrow function.
+- Centralized the shared animation easing value in styles.css for easier maintenance.
+- Confirmed that the site remains static and does not need backend infrastructure for GitHub Pages.
+- Added a project structure guide to README.md to make future edits easier to find.
+
+## AI Usage in this version
+- Prompt: For Version 0.0.7 Nothing changes but maybe just make the code more simpler and yeah backend changes that allow for much simpler coding of the webiste.
